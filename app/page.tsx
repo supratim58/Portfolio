@@ -41,7 +41,7 @@ export default function Portfolio() {
                 </div>
                 <div className="flex items-center text-sm text-muted-foreground">
                   <Mail className="w-4 h-4 mr-1" />
-                  <Link href="mailto:john@example.com" className="hover:text-primary transition-colors">
+                  <Link href="mailto:supratim.bankura@gmail.com" className="hover:text-primary transition-colors">
                     supratim.bankura@gmail.com
                   </Link>
                 </div>
@@ -396,7 +396,7 @@ export default function Portfolio() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
-              <Link href="supratim.bankura@gmail.com">
+              <Link href="mailto:supratim.bankura@gmail.com">
                 <Button
                   variant="default"
                   className="w-full gap-2 rounded-full bg-gradient-to-r from-primary to-primary hover:from-primary hover:to-primary/90 transition-all duration-300"
