@@ -101,12 +101,12 @@ export default function Portfolio() {
           </h2>
           <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-border/50 hover:border-primary/20 transition-all duration-300">
             <p className="text-card-foreground leading-relaxed">
-              I’m Supratim Haldar, a final-year B.Tech Computer Science & Engineering student at Ramkrishna Mahato Government Engineering College, Purulia, 
-              with a strong focus on cybersecurity and threat analysis. I’ve tackled EDR challenges using LetsDefend and TryHackMe, 
-              conducted advanced malicious network-traffic investigations to uncover C2 activity and phishing URLs, 
-              and built a Python-based CLI malware detector leveraging YARA rules and macro analysis. Proficient in Python, Java, C/C++, 
-              and tools like Splunk, Wireshark, Sysmon, Snort, and YARA on both Linux and Windows environments, 
-              I’m eager to apply my skills in a hands-on cybersecurity role. 
+              I’m Supratim Haldar, a final-year B.Tech Computer Science & Engineering student at Ramkrishna Mahato Government Engineering College, Purulia,
+              with a strong focus on cybersecurity and threat analysis. I’ve tackled EDR challenges using LetsDefend and TryHackMe,
+              conducted advanced malicious network-traffic investigations to uncover C2 activity and phishing URLs,
+              and built a Python-based CLI malware detector leveraging YARA rules and macro analysis. Proficient in Python, Java, C/C++,
+              and tools like Splunk, Wireshark, Sysmon, Snort, and YARA on both Linux and Windows environments,
+              I’m eager to apply my skills in a hands-on cybersecurity role.
             </p>
           </div>
         </section>
@@ -130,21 +130,21 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     "SOC analyst",
-                    "Network Monitoring", 
-                    "Malware Analysis", 
-                    "Incident Response", 
-                    "IDS/IPS", 
+                    "Network Monitoring",
+                    "Malware Analysis",
+                    "Incident Response",
+                    "IDS/IPS",
                     "Networking",
                     "Operating Systems",
                     "Computer Forensics",
                   ].map((skill) => (
-                      <Badge
-                        key={skill}
-                        className="bg-primary/10 hover:bg-primary/20 text-primary border-primary/20 hover:border-primary/30 transition-colors"
-                      >
-                        {skill}
-                      </Badge>
-                    ),
+                    <Badge
+                      key={skill}
+                      className="bg-primary/10 hover:bg-primary/20 text-primary border-primary/20 hover:border-primary/30 transition-colors"
+                    >
+                      {skill}
+                    </Badge>
+                  ),
                   )}
                 </div>
               </div>
@@ -321,6 +321,8 @@ export default function Portfolio() {
                   "A CLI tool to detect malware in files using YARA rules and macro analysis.",
                 tags: ["Python", "YARA", "Malware Analysis"],
                 image: "/MFD.png?height=240&width=480",
+                demo: "",
+                code: "https://github.com/supratim58/Malicious_File_Detector",
               },
               {
                 title: "BANK-CUSTOMER-CHURN-MODEL",
@@ -328,6 +330,8 @@ export default function Portfolio() {
                   "A machine learning model to predict customer churn in banking using Python and Scikit-learn.",
                 tags: ["Python", "Machine Learning", "Scikit-learn"],
                 image: "/BCCM.png?height=240&width=480",
+                demo: "",
+                code: "https://github.com/supratim58/BANK-CUSTOMER-CHURN-MODEL",
               },
             ].map((project, index) => (
               <Card
@@ -354,13 +358,13 @@ export default function Portfolio() {
                     ))}
                   </div>
                   <div className="flex gap-3 relative z-10">
-                    <Link href="#" target="_blank">
+                    {project.demo ? <Link href={project.demo} target="_blank">
                       <Button size="sm" variant="default" className="gap-2 rounded-full">
                         <ExternalLink className="w-4 h-4" />
                         Demo
                       </Button>
-                    </Link>
-                    <Link href="#" target="_blank">
+                    </Link> : null}
+                    <Link href={project.code} target="_blank">
                       <Button size="sm" variant="outline" className="gap-2 rounded-full">
                         <Github className="w-4 h-4" />
                         Code
